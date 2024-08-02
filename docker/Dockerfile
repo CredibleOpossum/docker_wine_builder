@@ -6,7 +6,7 @@ RUN apt install gcc-multilib gcc-mingw-w64 libasound2-dev libpulse-dev libdbus-1
 RUN apt install flex build-essential bison libx11-dev -y # Seemingly unlisted deps.
 RUN apt install libwayland-dev libxkbcommon-dev libxkbregistry-dev -y # Wayland related.
 RUN apt install libwayland-dev:i386 libxkbcommon-dev:i386 libxkbregistry-dev:i386 -y # Wayland 32bit.
-RUN apt install libfreetype-dev:i386 libx11-dev:i386 -y
+RUN apt install libfreetype-dev:i386 libx11-dev:i386  libvulkan-dev:i386 -y
 
 COPY docker/build_wow64.sh /bin/
 WORKDIR /app/wine
