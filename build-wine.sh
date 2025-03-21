@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 docker build . -t wine-builder -f docker/Dockerfile && \
 export container_id=$(docker run -v $(pwd)/wine:/app/wine/:z --user=$(id -u):$(id -g) -it --detach wine-builder) && \
 docker logs -f $container_id && \
